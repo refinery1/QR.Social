@@ -1,1 +1,1 @@
-# QR.social
+# QR.Social

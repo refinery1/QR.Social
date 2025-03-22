@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QR.social.Server", "QR.social.Server\QR.social.Server.csproj", "{C9FBC306-AF8B-4712-A436-E38E2E712EF5}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "qr.social.client", "qr.social.client\qr.social.client.esproj", "{0437294C-CD92-4D83-BF36-6D4137F2684A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9FBC306-AF8B-4712-A436-E38E2E712EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9FBC306-AF8B-4712-A436-E38E2E712EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9FBC306-AF8B-4712-A436-E38E2E712EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9FBC306-AF8B-4712-A436-E38E2E712EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0437294C-CD92-4D83-BF36-6D4137F2684A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
