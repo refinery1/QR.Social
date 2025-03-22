@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QR.social.Server.Data;
 using QR.social.Server.Models;
-using QRCoder;
+using QRCoder; // This should resolve QRCode
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Security.Claims;
@@ -26,9 +26,9 @@ public class QRCodesController : ControllerBase
     [HttpPost("static")]
     public IActionResult CreateStatic([FromBody] string url)
     {
-        var qrGenerator = new QRCodeGenerator();
+        var qrGenerator = new QRCodeGenerator(); // This works, so QRCoder is present
         var qrCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
-        var qrCode = new QRCode(qrCodeData);
+        var qrCode = new QRCode(qrCodeData); // Line 31 - CS0246 here
         using var bitmap = qrCode.GetGraphic(20);
         using var stream = new MemoryStream();
         bitmap.Save(stream, ImageFormat.Png);
@@ -45,7 +45,7 @@ public class QRCodesController : ControllerBase
         await _db.SaveChangesAsync();
         var qrGenerator = new QRCodeGenerator();
         var qrCodeData = qrGenerator.CreateQrCode($"https://qr.social/qr/{qr.Id}", QRCodeGenerator.ECCLevel.Q);
-        var qrCode = new QRCode(qrCodeData);
+        var qrCode = new QRCode(qrCodeData); // Line 48 - CS0246 here
         using var bitmap = qrCode.GetGraphic(20);
         using var stream = new MemoryStream();
         bitmap.Save(stream, ImageFormat.Png);
